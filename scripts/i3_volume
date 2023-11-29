@@ -6,11 +6,11 @@
 
 # Icons
 iDIR='/usr/share/archcraft/icons/dunst'
-notify_cmd='dunstify -u low -h string:x-dunst-stack-tag:obvolume'
+# notify_cmd='dunstify -u low -h string:x-dunst-stack-tag:obvolume'
 
 # Get Volume
 get_volume() {
-	echo "`pulsemixer --get-volume | cut -d' ' -f1`"
+	echo "$(pulsemixer --get-volume | cut -d' ' -f1)"
 }
 
 # Get icons
@@ -28,43 +28,45 @@ get_icon() {
 }
 
 # Notify
-notify_user() {
-	${notify_cmd} -i "$icon" "Volume : $(get_volume)%"
-}
+# notify_user() {
+# ${notify_cmd} -i "$icon" "Volume : $(get_volume)%"
+# }
 
 # Increase Volume
 inc_volume() {
-	[[ `pulsemixer --get-mute` == 1 ]] && pulsemixer --unmute
-	pulsemixer --max-volume 100 --change-volume +5 && get_icon && notify_user
+	[[ $(pulsemixer --get-mute) == 1 ]] && pulsemixer --unmute
+	pulsemixer --max-volume 100 --change-volume +5
+	# && get_icon && notify_user
 }
 
 # Decrease Volume
 dec_volume() {
-	[[ `pulsemixer --get-mute` == 1 ]] && pulsemixer --unmute
-	pulsemixer --max-volume 100 --change-volume -5 && get_icon && notify_user
+	[[ $(pulsemixer --get-mute) == 1 ]] && pulsemixer --unmute
+	pulsemixer --max-volume 100 --change-volume -5
+	# && get_icon && notify_user
 }
 
 # Toggle Mute
 toggle_mute() {
-	if [[ `pulsemixer --get-mute` == 0 ]]; then
-		pulsemixer --toggle-mute && ${notify_cmd} -i "$iDIR/volume-mute.png" "Mute"
+	if [[ $(pulsemixer --get-mute) == 0 ]]; then
+		pulsemixer --toggle-mute
 	else
-		pulsemixer --toggle-mute && get_icon && ${notify_cmd} -i "$icon" "Unmute"
+		pulsemixer --toggle-mute
 	fi
 }
 
 # Toggle Mic
 toggle_mic() {
-	ID="`pulsemixer --list-sources | grep 'Default' | cut -d',' -f1 | cut -d' ' -f3`"
-	if [[ `pulsemixer --id $ID --get-mute` == 0 ]]; then
-		pulsemixer --id ${ID} --toggle-mute && ${notify_cmd} -i "$iDIR/microphone-mute.png" "Microphone Switched OFF"
+	ID="$(pulsemixer --list-sources | grep 'Default' | cut -d',' -f1 | cut -d' ' -f3)"
+	if [[ $(pulsemixer --id $ID --get-mute) == 0 ]]; then
+		pulsemixer --id ${ID} --toggle-mute
 	else
-		pulsemixer --id ${ID} --toggle-mute && ${notify_cmd} -i "$iDIR/microphone.png" "Microphone Switched ON"
+		pulsemixer --id ${ID} --toggle-mute
 	fi
 }
 
 # Execute accordingly
-if [[ -x `which pulsemixer` ]]; then
+if [[ -x $(which pulsemixer) ]]; then
 	if [[ "$1" == "--get" ]]; then
 		get_volume
 	elif [[ "$1" == "--inc" ]]; then
@@ -79,5 +81,6 @@ if [[ -x `which pulsemixer` ]]; then
 		echo $(get_volume)%
 	fi
 else
-	${notify_cmd} "'pulsemixer' is not installed."
+	sleep .0001
+
 fi
