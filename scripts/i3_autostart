@@ -50,3 +50,4 @@ exec mpd &
 
 # Start xfce4-panel
 exec xfce4-panel &
+exec nm-applet &
