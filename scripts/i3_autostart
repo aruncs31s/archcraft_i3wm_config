@@ -34,7 +34,7 @@ xfce4-power-manager &
 xsetroot -cursor_name left_ptr
 
 # Restore wallpaper
-hsetroot -cover "$idir"/theme/wallpaper
+# hsetroot -cover "$idir"/theme/wallpaper
 
 # Lauch notification daemon
 "$idir"/scripts/i3_dunst
@@ -51,3 +51,4 @@ exec mpd &
 # Start xfce4-panel
 exec xfce4-panel &
 exec nm-applet &
+exec nitrogen --restore &
