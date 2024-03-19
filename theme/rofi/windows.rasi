@@ -4,6 +4,7 @@
 
 /*****----- Configuration -----*****/
 configuration {
+    columns: 2;
 	modi:                       "window";
     show-icons:                 false;
     display-drun:               " Apps";

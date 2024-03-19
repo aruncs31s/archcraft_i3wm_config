@@ -8,5 +8,5 @@ RASI="$DIR/theme/rofi/windows.rasi"
 
 # Run
 rofi \
-	-show window \
+	-show windowcd \
 	-theme ${RASI}
