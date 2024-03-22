@@ -85,7 +85,7 @@ for_window [class=".*"] title_format "%title"
 # for_window [class=".*"] title_format "%class | %title"
 
 ## Enable window icons for all windows
-for_window [all] title_window_icon off 
+for_window [all] title_window_icon off  move position center
 
 ## Enable window icons for all windows with extra horizontal padding
 #for_window [all] title_window_icon padding 5px
