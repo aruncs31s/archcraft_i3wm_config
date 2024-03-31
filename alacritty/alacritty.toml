@@ -8,7 +8,7 @@
 ## Import additional configuration files.
 import = [
   "~/.config/i3/alacritty/colors.toml",
-  "~/.config/alacritty/fonts.toml",
+  "~/.config/i3/alacritty/fonts.toml",
 ]
 
 ## You can set shell.program to the path of your favorite shell, e.g. /bin/zsh.
@@ -39,7 +39,7 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 position = "None"
 dynamic_padding = true
 decorations = "full"
-opacity = 1.0
+opacity = 0.85
 blur = true
 startup_mode = "Windowed"
 dynamic_title = true
