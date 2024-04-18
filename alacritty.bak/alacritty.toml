@@ -7,13 +7,14 @@
 
 ## Import additional configuration files.
 import = [
-  "~/.config/bspwm/alacritty/colors.toml",
-  "~/.config/bspwm/alacritty/fonts.toml",
+  "~/.config/i3/alacritty/colors.toml",
+  "~/.config/i3/alacritty/fonts.toml",
 ]
 
 ## You can set shell.program to the path of your favorite shell, e.g. /bin/zsh.
 ## Entries in shell.args are passed as arguments to the shell.
-# shell = { program = "/bin/tmux"}
+#
+# shell = { program = "/bin/tmux" }
 
 ## Directory the shell is started in. When this is unset, or "None",
 ## the working directory of the parent process will be used.
@@ -38,8 +39,8 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 position = "None"
 dynamic_padding = true
 decorations = "full"
-opacity = 0.95
-blur = false
+opacity = 1
+blur = true
 startup_mode = "Windowed"
 dynamic_title = true
 class = { instance = "Alacritty", general = "Alacritty" }
@@ -52,8 +53,8 @@ lines = 24
 
 ## Blank space added around the window in pixels.
 [window.padding]
-x = 1
-y = 1
+x = 0
+y = 0
 
 ## SCROLLING ------------------------------------------------------
 [scrolling]
@@ -67,7 +68,7 @@ multiplier = 3
 # command = { program = "paplay", args = [
 #   "/usr/share/sounds/freedesktop/stereo/dialog-error.oga",
 # ] }
-#
+
 ## SELECTION ------------------------------------------------------
 [selection]
 save_to_clipboard = true
@@ -82,7 +83,7 @@ thickness = 0.15
 
 [cursor.style]
 shape = "Block"
-blinking = "On"
+blinking = "Off"
 
 ## MOUSE ----------------------------------------------------------
 [mouse]

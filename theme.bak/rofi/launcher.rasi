@@ -1,17 +1,17 @@
 /**
- * Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
+ * Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
  **/
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "window";
-    show-icons:                 true;
-    display-drun:               "";
-    display-run:                "";
-    display-filebrowser:        "";
-    display-window:             "";
+	modi:                       "drun,filebrowser";
+    show-icons:                 false;
+    display-drun:               " Apps";
+    display-run:                " Run";
+    display-filebrowser:        " Files";
+    display-window:             " Windows";
 	drun-display-format:        "{name}";
-	window-format:              "{t}";
+	window-format:              "{c} · {t}";
 }
 
 /*****----- Global Properties -----*****/
@@ -19,7 +19,7 @@ configuration {
 @import                          "shared/fonts.rasi"
 
 * {
-    border-colour:               var(background-alt);
+    border-colour:               var(selected);
     handle-colour:               var(selected);
     background-colour:           var(background);
     foreground-colour:           var(foreground);
@@ -51,7 +51,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       800px;
+    width:                       650px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -59,7 +59,7 @@ window {
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      2px solid;
+    border:                      0px solid;
     border-radius:               12px;
     border-color:                @border-colour;
     cursor:                      "default";
@@ -85,7 +85,7 @@ mainbox {
     border-radius:               0px 0px 0px 0px;
     border-color:                @border-colour;
     background-color:            transparent;
-    children:                    [ "inputbar", "listview" ];
+    children:                    [ "inputbar", "message", "listview", "mode-switcher" ];
 }
 
 /*****----- Inputbar -----*****/
@@ -110,10 +110,10 @@ prompt {
 textbox-prompt-colon {
     enabled:                     true;
     padding:                     6px 9px;
-    border-radius:               8px;
+    border-radius:               12px;
     expand:                      false;
-    str:                         "";
-    background-color:            @active;
+    str:                         "";
+    background-color:            @selected;
     text-color:                  @background;
 }
 entry {
@@ -122,7 +122,7 @@ entry {
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "Filter...";
+    placeholder:                 "Search...";
     placeholder-color:           inherit;
 }
 num-filtered-rows {
@@ -153,8 +153,8 @@ case-indicator {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     3;
-    lines:                       6;
+    columns:                     2;
+    lines:                       8;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -183,11 +183,11 @@ scrollbar {
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    spacing:                     8px;
+    spacing:                     0px;
     margin:                      0px;
-    padding:                     5px;
+    padding:                     6px;
     border:                      0px solid;
-    border-radius:               8px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
@@ -257,16 +257,16 @@ mode-switcher{
     text-color:                  @foreground-colour;
 }
 button {
-    padding:                     8px 10px;
+    padding:                     6px 10px;
     border:                      0px solid;
-    border-radius:               8px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  inherit;
     cursor:                      pointer;
 }
 button selected {
-    background-color:            var(active);
+    background-color:            var(selected-normal-background);
     text-color:                  var(selected-normal-foreground);
 }
 
@@ -274,9 +274,9 @@ button selected {
 message {
     enabled:                     true;
     margin:                      0px;
-    padding:                     8px 10px;
+    padding:                     6px 10px;
     border:                      0px solid;
-    border-radius:               8px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  @foreground-colour;

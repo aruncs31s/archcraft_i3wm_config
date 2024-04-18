@@ -3,10 +3,9 @@
 ## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
 
 # Import Current Theme
-DIR="~/.config/i3/"
-RASI="$DIR/theme/rofi/windows.rasi"
+DIR="/usr/share/archcraft/dwm"
+RASI="$DIR/theme/rofi/filebrowser.rasi"
 
 # Run
 rofi \
-	-show window \
-	-theme ${RASI}
+	-show filebrowser -theme ${RASI}
