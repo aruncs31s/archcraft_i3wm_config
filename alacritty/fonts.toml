@@ -14,21 +14,23 @@ builtin_box_drawing = true
 # family = "JetBrainsMono Nerd Font"
 family = "CaskaydiaCove Nerd Font"
 # family = "Agave Nerd Font"
+# family = "BlexMono Nerd Font Italic"
 
 ## If the family is not specified, it will fall back to the value specified for the normal font.
 [font.bold]
 # family = "JetBrainsMono Nerd Font"
-family = "CaskaydiaCove Nerd Font"
-
+# family = "CaskaydiaCove Nerd Font"
+family = "BlexMono Nerd Font"
 ## If the family is not specified, it will fall back to the value specified for the normal font.
 [font.italic]
 # family = "JetBrainsMono Nerd Font"
-family = "CaskaydiaCove Nerd Font"
+# family = "CaskaydiaCove Nerd Font"
+family = "BlexMono Nerd Font"
 
 ## If the family is not specified, it will fall back to the value specified for the normal font.
 [font.bold_italic]
-# family = "JetBrainsMono Nerd Font"
-family = "CaskaydiaCove Nerd Font"
+family = "JetBrainsMono Nerd Font"
+# family = "CaskaydiaCove Nerd Font"
 
 ## Offset is the extra space around each character.
 ## 'y' can be thought of as modifying the line spacing, and 'x' as modifying the letter spacing.

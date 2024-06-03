@@ -52,4 +52,4 @@ exec mpd &
 # exec xfce4-panel &
 # exec nm-applet &
 exec nitrogen --restore &
-exec ~/Desktop/Projects/archcraft_i3wm_config/theme/polybar/launch.sh &
+exec ~/Projects/Git/Linux/archcraft_i3wm_config/theme/polybar/launch.sh &
