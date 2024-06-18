@@ -53,3 +53,5 @@ exec mpd &
 # exec nm-applet &
 exec nitrogen --restore &
 exec ~/Projects/Git/Linux/archcraft_i3wm_config/theme/polybar/launch.sh &
+
+libinput-gestures -c ~/.config/libinput-gestures.i3.conf &
