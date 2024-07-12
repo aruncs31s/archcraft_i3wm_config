@@ -24,7 +24,7 @@ if [[ ! $(pidof xfce-polkit) ]]; then
 fi
 
 # Enable power management
-xfce4-power-manager &
+# xfce4-power-manager &
 
 # Enable Super Keys For Menu
 # ksuperkey -e 'Super_L=Alt_L|F1' &
@@ -53,5 +53,8 @@ exec mpd &
 # exec nm-applet &
 exec nitrogen --restore &
 exec ~/Projects/Git/Linux/archcraft_i3wm_config/theme/polybar/launch.sh &
+dsd *
+dsd *
 
 libinput-gestures -c ~/.config/libinput-gestures.i3.conf &
+ulauncher &
