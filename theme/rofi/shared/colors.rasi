@@ -3,7 +3,7 @@
 /* Colors */
 
 * {
-    background:     #000000;
+    background:     #1e222a;
     background-alt: #353535;
     foreground:     #D8D8D8;
     selected:       #FFFFFF;

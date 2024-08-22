@@ -3,7 +3,7 @@
 ## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
 
 # Import Current Theme
-DIR="~/.config/i3/"
+DIR="~/.config/i3"
 RASI="$DIR/theme/rofi/powermenu.rasi"
 CNFR="$DIR/theme/rofi/confirm.rasi"
 
