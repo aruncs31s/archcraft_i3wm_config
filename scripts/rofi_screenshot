@@ -3,7 +3,7 @@
 ## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
 
 # Import Current Theme
-DIR="/usr/share/archcraft/dwm"
+DIR="~/.config/i3/"
 RASI="$DIR/theme/rofi/screenshot.rasi"
 
 # Theme Elements
