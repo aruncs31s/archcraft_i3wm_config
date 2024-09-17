@@ -14,7 +14,7 @@ import = [
 ## You can set shell.program to the path of your favorite shell, e.g. /bin/zsh.
 ## Entries in shell.args are passed as arguments to the shell.
 #
-# shell = { program = "/bin/tmux" }
+shell = { program = "/bin/tmux" }
 
 ## Directory the shell is started in. When this is unset, or "None",
 ## the working directory of the parent process will be used.
@@ -39,7 +39,7 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 position = "None"
 dynamic_padding = true
 decorations = "full"
-opacity = 0.8
+opacity = 0.9
 blur = true
 startup_mode = "Windowed"
 dynamic_title = true
