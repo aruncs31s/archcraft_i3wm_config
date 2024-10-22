@@ -13,7 +13,6 @@ import = [
 
 ## You can set shell.program to the path of your favorite shell, e.g. /bin/zsh.
 ## Entries in shell.args are passed as arguments to the shell.
-#
 # shell = { program = "/bin/tmux" }
 
 ## Directory the shell is started in. When this is unset, or "None",
@@ -39,7 +38,7 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 position = "None"
 dynamic_padding = true
 decorations = "full"
-opacity = 0.85
+opacity = 0.9
 blur = true
 startup_mode = "Windowed"
 dynamic_title = true
@@ -53,8 +52,8 @@ lines = 24
 
 ## Blank space added around the window in pixels.
 [window.padding]
-x = 0
-y = 0
+x = 1
+y = 1
 
 ## SCROLLING ------------------------------------------------------
 [scrolling]
@@ -68,7 +67,7 @@ multiplier = 3
 # command = { program = "paplay", args = [
 #   "/usr/share/sounds/freedesktop/stereo/dialog-error.oga",
 # ] }
-
+#
 ## SELECTION ------------------------------------------------------
 [selection]
 save_to_clipboard = true
@@ -83,11 +82,11 @@ thickness = 0.15
 
 [cursor.style]
 shape = "Block"
-blinking = "Off"
+blinking = "On"
 
 ## MOUSE ----------------------------------------------------------
 [mouse]
-hide_when_typing = false
+hide_when_typing = true
 
 ## HINTS ----------------------------------------------------------
 [[hints.enabled]]

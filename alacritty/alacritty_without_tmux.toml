@@ -6,11 +6,13 @@
 ## GENERAL --------------------------------------------------------
 
 ## Import additional configuration files.
-import = ["~/.config/alacritty/colors.toml", "~/.config/alacritty/fonts.toml"]
+import = [
+  "~/.config/bspwm/alacritty/colors.toml",
+  "~/.config/bspwm/alacritty/fonts.toml",
+]
 
 ## You can set shell.program to the path of your favorite shell, e.g. /bin/zsh.
 ## Entries in shell.args are passed as arguments to the shell.
-#
 # shell = { program = "/bin/tmux" }
 
 ## Directory the shell is started in. When this is unset, or "None",
@@ -36,7 +38,7 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 position = "None"
 dynamic_padding = true
 decorations = "full"
-opacity = 1.0
+opacity = 0.90
 blur = false
 startup_mode = "Windowed"
 dynamic_title = true
@@ -50,8 +52,8 @@ lines = 24
 
 ## Blank space added around the window in pixels.
 [window.padding]
-x = 0
-y = 0
+x = 1
+y = 1
 
 ## SCROLLING ------------------------------------------------------
 [scrolling]
@@ -65,7 +67,7 @@ multiplier = 3
 # command = { program = "paplay", args = [
 #   "/usr/share/sounds/freedesktop/stereo/dialog-error.oga",
 # ] }
-
+#
 ## SELECTION ------------------------------------------------------
 [selection]
 save_to_clipboard = true
@@ -80,7 +82,7 @@ thickness = 0.15
 
 [cursor.style]
 shape = "Block"
-blinking = "Off"
+blinking = "On"
 
 ## MOUSE ----------------------------------------------------------
 [mouse]
