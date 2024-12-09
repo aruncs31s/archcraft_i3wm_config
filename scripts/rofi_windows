@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
+## Chang according to WM
+WM_DIR="~/.config/i3"
+RASI_FOLDER="$WM_DIR/theme/rofi/windows.rasi"
 
-# Import Current Theme
-DIR="/usr/share/archcraft/dwm"
-RASI="$DIR/theme/rofi/windows.rasi"
-
-# Run
 rofi \
 	-show window \
-	-theme ${RASI}
+	-theme ${RASI_FOLDER}

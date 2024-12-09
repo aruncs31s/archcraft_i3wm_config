@@ -1,18 +1,17 @@
 /**
- * Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
+ * Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
  **/
 
 /*****----- Configuration -----*****/
 configuration {
-    columns: 2;
 	modi:                       "window";
-    show-icons:                 false;
-    display-drun:               " Apps";
-    display-run:                " Run";
-    display-filebrowser:        " Files";
-    display-window:             " Windows";
+    show-icons:                 true;
+    display-drun:               "";
+    display-run:                "";
+    display-filebrowser:        "";
+    display-window:             "";
 	drun-display-format:        "{name}";
-	window-format:              "{c} · {t}";
+	window-format:              "{t}";
 }
 
 /*****----- Global Properties -----*****/
@@ -20,7 +19,7 @@ configuration {
 @import                          "shared/fonts.rasi"
 
 * {
-    border-colour:               var(selected);
+    border-colour:               var(background-alt);
     handle-colour:               var(selected);
     background-colour:           var(background);
     foreground-colour:           var(foreground);
@@ -60,7 +59,7 @@ window {
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
+    border:                      2px solid;
     border-radius:               12px;
     border-color:                @border-colour;
     cursor:                      "default";
@@ -110,11 +109,11 @@ prompt {
 }
 textbox-prompt-colon {
     enabled:                     true;
-    padding:                     6px 9px;
-    border-radius:               12px;
+    padding:                     6px 10px;
+    border-radius:               8px;
     expand:                      false;
-    str:                         "";
-    background-color:            @selected;
+    str:                         "";
+    background-color:            @active;
     text-color:                  @background;
 }
 entry {
@@ -155,7 +154,7 @@ case-indicator {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       8;
+    lines:                       6;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -184,11 +183,11 @@ scrollbar {
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    spacing:                     0px;
+    spacing:                     8px;
     margin:                      0px;
-    padding:                     6px;
+    padding:                     5px;
     border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               8px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
@@ -258,16 +257,16 @@ mode-switcher{
     text-color:                  @foreground-colour;
 }
 button {
-    padding:                     6px 10px;
+    padding:                     8px 10px;
     border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               8px;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  inherit;
     cursor:                      pointer;
 }
 button selected {
-    background-color:            var(selected-normal-background);
+    background-color:            var(active);
     text-color:                  var(selected-normal-foreground);
 }
 
@@ -275,9 +274,9 @@ button selected {
 message {
     enabled:                     true;
     margin:                      0px;
-    padding:                     6px 10px;
+    padding:                     8px 10px;
     border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               8px;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  @foreground-colour;

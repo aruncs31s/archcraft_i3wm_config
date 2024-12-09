@@ -1,3 +1,26 @@
+## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
+##
+## Configuration for Alacritty, the GPU enhanced terminal emulator.
+## It's a very basic and simple config file, for full configuration, Run `man 5 alacritty`
+
+## GENERAL --------------------------------------------------------
+
+## Import additional configuration files.
+import = ["~/.config/alacritty/colors.toml", "~/.config/alacritty/fonts.toml"]
+
+## You can set shell.program to the path of your favorite shell, e.g. /bin/zsh.
+## Entries in shell.args are passed as arguments to the shell.
+shell = { program = "/bin/tmux", args = ["new-session", "-A", "-s", "Term"] }
+
+## Directory the shell is started in. When this is unset, or "None",
+## the working directory of the parent process will be used.
+#working_directory = "None"
+
+## Live config reload
+live_config_reload = true
+
+## Offer IPC using alacritty msg
+ipc_socket = true
 
 ## ENVIRONMENT ----------------------------------------------------
 
@@ -9,13 +32,13 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 
 ## WINDOW ---------------------------------------------------------
 [window]
-opacity = 1
 position = "None"
 dynamic_padding = true
 decorations = "none"
+opacity = 0.93
 blur = false
 startup_mode = "Windowed"
-dynamic_title = false
+dynamic_title = true
 class = { instance = "Alacritty", general = "Alacritty" }
 decorations_theme_variant = "None"
 
@@ -26,8 +49,8 @@ lines = 24
 
 ## Blank space added around the window in pixels.
 [window.padding]
-x = 3
-y = 3
+x = 1
+y = 1
 
 ## SCROLLING ------------------------------------------------------
 [scrolling]
@@ -35,12 +58,12 @@ history = 10000
 multiplier = 3
 
 ## BELL -----------------------------------------------------------
-# [bell]
-# animation = "Linear"
-# duration = 0
-# command = { program = "paplay", args = [
-#   "/usr/share/sounds/freedesktop/stereo/dialog-error.oga",
-# ] }
+[bell]
+animation = "Linear"
+duration = 20
+command = { program = "paplay", args = [
+  "/usr/share/sounds/freedesktop/stereo/dialog-error.oga",
+] }
 
 ## SELECTION ------------------------------------------------------
 [selection]
@@ -81,33 +104,3 @@ renderer = "None"
 print_events = false
 highlight_damage = false
 prefer_egl = false
-
-[general]
-
-## Directory the shell is started in. When this is unset, or "None",
-## the working directory of the parent process will be used.
-#working_directory = "None"
-
-## Live config reload
-live_config_reload = true
-
-## Offer IPC using alacritty msg
-ipc_socket = true
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-##
-## Configuration for Alacritty, the GPU enhanced terminal emulator.
-## It's a very basic and simple config file, for full configuration, Run `man 5 alacritty`
-
-## GENERAL --------------------------------------------------------
-
-## Import additional configuration files.
-import = [
-  "~/.config/i3/alacritty/colors.toml",
-  "~/.config/alacritty/fonts.toml",
-]
-
-[terminal]
-
-## You can set shell.program to the path of your favorite shell, e.g. /bin/zsh.
-## Entries in shell.args are passed as arguments to the shell.
-# shell = { program = "/bin/tmux", args = ["new-session", "-A", "-s", "Term"] }

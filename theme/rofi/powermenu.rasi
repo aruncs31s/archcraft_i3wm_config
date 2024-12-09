@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
+ * Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
  **/
 
 /*****----- Configuration -----*****/
@@ -26,9 +26,9 @@ window {
     y-offset:                    0px;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
+    border:                      2px solid;
     border-radius:               12px;
-    border-color:                @selected;
+    border-color:                @background-alt;
     cursor:                      "default";
     background-color:            @background;
 }
@@ -59,16 +59,16 @@ inputbar {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "";
-    padding:                     6px 10px;
-    border-radius:               12px;
+    str:                         "";
+    padding:                     8px 10px;
+    border-radius:               8px;
     background-color:            @selected;
     text-color:                  @background;
 }
 prompt {
     enabled:                     true;
-    padding:                     6px 10px;
-    border-radius:               12px;
+    padding:                     8px 10px;
+    border-radius:               8px;
     background-color:            @active;
     text-color:                  @background;
 }
@@ -77,9 +77,9 @@ prompt {
 message {
     enabled:                     true;
     margin:                      0px;
-    padding:                     6px 10px;
+    padding:                     8px 10px;
     border:                      0px solid;
-    border-radius:               12px;
+    border-radius:               8px;
     border-color:                @selected;
     background-color:            @background-alt;
     text-color:                  @foreground;
@@ -110,7 +110,7 @@ element {
     enabled:                     true;
     padding:                     20px 10px;
     border:                      0px solid;
-    border-radius:               100%;
+    border-radius:               8px;
     border-color:                @selected;
     background-color:            transparent;
     text-color:                  @foreground;
@@ -127,9 +127,6 @@ element-text {
 
 element normal.normal,
 element alternate.normal {
-    border:                      0px solid;
-    border-radius:               100%;
-    border-color:                @selected;
     background-color:            var(background-alt);
     text-color:                  var(foreground);
 }
