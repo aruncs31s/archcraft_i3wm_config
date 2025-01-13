@@ -9,13 +9,13 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 
 ## WINDOW ---------------------------------------------------------
 [window]
-opacity = 1
+opacity = 0.96
 position = "None"
 dynamic_padding = true
 decorations = "none"
 blur = false
 startup_mode = "Windowed"
-dynamic_title = false
+dynamic_title = true
 class = { instance = "Alacritty", general = "Alacritty" }
 decorations_theme_variant = "None"
 
