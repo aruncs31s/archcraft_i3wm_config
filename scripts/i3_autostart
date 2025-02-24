@@ -49,10 +49,10 @@ xsetroot -cursor_name left_ptr
 exec mpd &
 
 # Start xfce4-panel
-exec xfce4-panel &
+# exec xfce4-panel &
 exec nm-applet &
 exec nitrogen --restore &
-# exec ~/Projects/Git/Linux/archcraft_i3wm_config/theme/polybar/launch.sh &
+exec ~/.config/i3/theme/polybar/launch.sh &
 
 exec alacritty --config-file ~/.config/i3/alacritty/alacritty.toml -e daily_notes.sh &
 
